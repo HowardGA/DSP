@@ -20,18 +20,24 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'home:index' %}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Area</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Areas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'core:list_a' %}">Area List</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:create_a'%}">New Area</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   GrantGoal Actions
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Grant Goals List</a></li>
-                  <li><a class="dropdown-item" href="#">New Grant Goal</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:list_gg' %}">Grant Goals List</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:create_gg'%}">New Grant Goal</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -39,10 +45,9 @@
                   SubGrantGoal Actions
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Sub GrantGoal List</a></li>
-                  <li><a class="dropdown-item" href="#">New Sub GrantGoal</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:list_sgg' %}">Sub GrantGoal List</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:create_sgg' %}">New Sub GrantGoal</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -50,10 +55,9 @@
                   Goal Actions
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Goal List</a></li>
-                  <li><a class="dropdown-item" href="#">New Goal</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:list_g' %}">Goal List</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:create_g' %}">New Goal</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -61,10 +65,9 @@
                   Issue Actions
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Issue List</a></li>
-                  <li><a class="dropdown-item" href="#">New Issue</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:list_i' %}">Issue List</a></li>
+                  <li><a class="dropdown-item" href="{% url 'core:create_i' %}">New Issue</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
