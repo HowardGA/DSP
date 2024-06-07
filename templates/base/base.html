@@ -72,7 +72,7 @@
               </li>
             </ul>
             <ul class="navbar-nav me-right mb-2 mb-lg-0" style="padding-right: 2%;">
-              <li><a class="dropdown-item" href="" style="padding-right: 2%;">| Logout </a></li>
+              <li><a class="dropdown-item" href="{% url 'home:logout' %}" style="padding-right: 2%;">| Logout </a></li>
               <li><a class="dropdown-item" style="margin-left:2% ;" href=""></a> | {{ request.user }} |</li>
             </ul>
             <form class="d-flex" role="search">

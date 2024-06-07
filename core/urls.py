@@ -40,9 +40,4 @@ urlpatterns = [
     path('update/area/<int:pk>/', views.UpdateArea.as_view(), name="update_a"),
     path('delete/area/<int:pk>/', views.DeleteArea.as_view(), name="delete_a"),
     
-
-
-
-
-
 ]

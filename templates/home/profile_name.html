@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+
+{% block title %}INDEX VIEW {% endblock title %}
+
+   <h1>Hola Mundo Django XD ...</h1>
+
+   {% block content %}
+
+   <table>
+    <thead>
+        <th></th>
+        <th>PROFILE NAME</th>
+        <th>TIMESTAMP</th>
+        <th>STATUS</th>
+        <th></th>
+        <th>ACTIONS</th>
+        <th></th>
+    </thead>
+    <tbody>
+        {% for profile in profiles %}
+        <tr>
+            <td>{{ profile.id }}</td>
+            <td>{{ profile.user.first_name }}</td>
+            <td>{{ profile.timestamp }}</td>
+            <td>{{ profile.status }}</td>
+            <td href = {%  %}>DETAILS</td>
+            <td href = {%  %}>UPDATE</td>
+            <td href = {%  %}>DELETE</td>
+
+
+        </tr>
+    </tbody>
+   </table>
+        
+{% endblock content %}
