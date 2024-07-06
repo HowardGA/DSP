@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import ListGrandGoalSerializer, DetailGrantGoalSerializer
+from rest_framework import generics
+from .serializers import ListGrandGoalSerializer, DetailGrantGoalSerializer, CreateGrantGoalSerializer, UpdateGrandGoalSerializer
 
 
 from core.models import GrantGoal
@@ -11,7 +12,9 @@ from core.models import GrantGoal
 ######### API GRANT GOAL
 
 ####Create
-
+class CreateGrantGoalAPIView(generics.CreateAPIView):
+    serializer_class = CreateGrantGoalSerializer
+    
 
 ##### RETRIEVE
 
@@ -31,5 +34,12 @@ class DetailGrantGoalAPIView(APIView):
         return Response (data)
 
 #UPDATE
+class UpdateGrantGoalAPIView(generics.UpdateAPIView):
+    serializer_class = UpdateGrandGoalSerializer
+    queryset = GrantGoal.objects.all()
+    
 
 # DELTE
+class DeleteGrantGoalAPIView(generics.DestroyAPIView):
+    serializer_class = DetailGrantGoalSerializer
+    queryset = GrantGoal.objects.all()
